@@ -1,0 +1,229 @@
+/**
+ * Boilerplate for responsive webpages.
+ * Created by James Bonder. This boilerplate offers
+ * mixins that support fluid and as well as fixed
+ * grids based on the Skeleton framework.
+ */
+
+// IMPORTS
+@import "vars"; // import _global_variables.scss
+@import "mixins"; // import _mixins.scss
+
+/* SASS FUNCTIONS
+ * ------------------------------------------------ */
+
+
+
+/* Box sizing for browser compatability
+ * ------------------------------------------------ */
+*{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}	
+/* SITE STYLES
+ * ------------------------------------------------ */
+
+/*/ BANDS 
+ * ------------------------------------------------ */
+
+.band{
+
+}
+
+.band.navigation{
+	padding: 20px 0 20px 0;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+}
+
+.band.footer{
+	min-height:40%;
+}
+
+.band.about{
+	padding: 40px 0 480px 0;
+	border-bottom:2px solid black;
+}
+
+.band.bottom{
+	border-top:2px solid black;
+}
+
+.band.lower{
+}
+
+.band.footer p{
+	text-align:center;
+}
+
+/* HEADING
+ *------------------------------------------------- */
+
+header.main {
+	padding:40px 0 20px 0;
+	text-align:center;
+}
+
+.container.primary{
+
+}
+
+.container.footer{
+}
+
+.container .columns{
+	margin:0 0px 0 0px;
+}
+
+.sixteen.columns p{
+	text-align:center;
+}
+
+
+/* NAVIGATION
+ *---------------------------------------------------- */
+
+nav.primary ul,
+nav.primary ul li{
+	margin:0px 0px 0px 72px;
+}
+
+nav.primary ul li{
+	display:inline;
+	float:left;
+	position:relative;
+	height:49px;
+}
+
+nav.primary ul li a{
+	display:inline-block;
+	padding:0 14px;
+	color:#fff;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; 
+	line-height:49px;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-weight:bold;
+	letter-spacing:0.08em;
+	font-size:130%;
+}
+
+nav.primary ul li a:hover{
+	background:#fff;
+	cursor:pointer;
+}
+
+nav.primary select{
+	display:none;
+	width:100%;	
+}
+
+/* Footer
+ *---------------------------------------------------- */
+
+.band.bottom{
+	bottom:0;
+	width:100%;
+}
+
+.container.foot{
+}
+
+.bottom article.eight.columns{
+}
+
+.bottom section.eight.columns{
+	float:right;
+	text-align:right;
+}
+
+.bottom section.eight.columns a{
+	text-decoration:none;
+}
+
+/* OTHER PAGE STYLES
+ * ------------------------------------------------ */
+
+
+html{height:100%;}
+body{
+	height:100%;
+	background: url(../images/bg_main.png) repeat #f8f8f8;
+}
+
+.container.about p{
+	text-align:center;
+}
+
+
+/* TEXT STYLING
+ *------------------------------------------------- */
+
+h3{
+	font-family:helvetica;
+}
+
+/* MEDIA QUERIES 
+ * ------------------------------------------------ */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/* Tablet Portrait size to standard (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+
+	nav.primary{
+		height:49px;
+	}
+
+	nav.primary select{
+		display:block;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height:24px;
+	}
+
+	nav.primary ul{
+		display:none;
+	}
+
+	.bottom article.eight.columns{
+		text-align:center;
+	}
+
+	.bottom section.eight.columns{
+		text-align:center;
+	}
+
+	.sixteen.columns p{
+		display:none;
+	}
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+@media only screen and (max-width 767px){
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 960px) {
+	nav.primary ul li{
+		margin:0 0 0 40px;
+	}
+}

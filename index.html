@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>A boilerplate for responsive web design</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS imports
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<!-- Javascript imports
+	================================================== -->
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+
+<div class="band header">
+
+	<header class="container main">
+
+		<div class="sixteen columns">
+
+			<img class="logo" src="">logo here
+
+		</div>
+
+	</header><!--end container-->
+
+</div><!--end band-->
+
+<div class="band navigation">
+
+	<nav class="container primary">
+
+		<div class="sixteen columns"> <!-- ul's to go in sixteen columns -->
+
+				<p>navigation here</p>
+
+				</div>
+
+			</nav><!--end container-->
+
+	</div><!--end band-->
+
+<div class="band about">
+
+	<section class="container about">
+
+		<p>main content here</p>
+
+	</div>
+
+</section><!--end container-->
+
+</div><!--end band-->
+
+<div class="band footer">
+
+	<div class="container footer">
+
+		<p>footer here</p>
+
+</div><!--end container-->
+
+</div><!--end band-->
+
+<div class="band bottom">
+	<div class="container foot">
+		<article class="eight columns">
+				&copy; James Bonder 2014
+		</article>
+		<section class="eight columns">
+			<a href="http://www.jamesbonder.co.uk">jamesbonder.co.uk
+			</section>
+		</div> <!--end contaner-->
+	</div><!--end band-->
+
+<!-- Javascript
+	============================================= -->
+
+<script>
+
+	// Responsive dropdown menu 
+	// Create the dropdown base
+		$("<select />").appendTo("nav");
+
+	// Create default option "Go to..."
+		$("<option />", {
+   		"selected": "selected",
+   		"value"   : "",
+   		"text"    : "Navigate to..."
+}		).appendTo("nav select");
+
+	// Populate dropdown with menu items
+		$("nav a").each(function() {
+ 		var el = $(this);
+ 		$("<option />", {
+    	 "value"   : el.attr("href"),
+    	 "text"    : el.text()
+ 		}).appendTo("nav select");
+});
+
+		$("nav select").change(function() {
+  window.location = $(this).find("option:selected").val();
+});
+</script>
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
